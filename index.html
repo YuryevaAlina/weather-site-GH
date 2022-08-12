@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather cite</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/52fb18f95a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-3"></div>
+        <div class="col-6 frame">
+          <div class="row wrapp">
+            <div class="row">
+              <div class="col-md-auto"><p>City 1</p></div>
+              <div class="col-md-auto"><p>City 2</p></div>
+              <div class="col-md-auto"><p>City 3</p></div>
+              <div class="col-md-auto"><p>City 4</p></div>
+            </div>
+            <form class="row g-3" id="search-form">
+              <div class="col-auto">
+                <input
+                  type="search"
+                  class="form-control rounded-0"
+                  id="inputCity"
+                  placeholder="Enter a city"
+                />
+              </div>
+              <div class="col-auto">
+                <button type="submit" value="Search" class="btn mb-3 rounded-0">
+                  Submit
+                </button>
+              </div>
+              <div class="col-auto">
+                <button class="btn mb-3 rounded-0" id="current-location-button">
+                  Current
+                </button>
+              </div>
+            </form>
+
+            <div class="row">
+              <p class="nomargin" id="dateToday">Today 24 June</p>
+              <h3 class="nomargin" id="display-city">London</h3>
+            </div>
+            <div class="row">
+              <div class="col-md-auto">
+                <p class="nomargin" id="description">Clouds</p>
+                <i class="fa-solid fa-cloud-sun fa-3x mainPicture"></i>
+                <p class="nomargin">Humidity: <span id="humidity">60</span>%</p>
+                <p class="nomargin">Wind: <span id="wind">9</span>km/h</p>
+              </div>
+              <div class="col-md-auto my-auto">
+                <p class="temperature" id="temperature">17</p>
+              </div>
+              <div class="col-md-auto my-auto">
+                <a href="#" id="celsius-link">°C</a> |
+                <a href="#" id="fahrengeit-link">°F</a>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-md-auto text-center">
+                <p class="nomargin">Sun</p>
+                <i class="fa-solid fa-cloud"></i>
+                <p>21°</p>
+              </div>
+              <div class="col-md-auto text-center">
+                <p class="nomargin">Mon</p>
+                <i class="fa-solid fa-sun"></i>
+                <p>21°</p>
+              </div>
+              <div class="col-md-auto text-center">
+                <p class="nomargin">Tue</p>
+                <i class="fa-solid fa-cloud-sun-rain"></i>
+                <p>21°</p>
+              </div>
+              <div class="col-md-auto text-center">
+                <p class="nomargin">Wed</p>
+                <i class="fa-solid fa-cloud-rain"></i>
+                <p>21°</p>
+              </div>
+              <div class="col-md-auto text-center">
+                <p class="nomargin">Thu</p>
+                <i class="fa-solid fa-smog"></i>
+                <p>21°</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3"></div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
